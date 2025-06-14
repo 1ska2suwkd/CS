@@ -31,13 +31,3 @@ class Stack:
 
     def __str__(self):
         return str(self.array[:self.top+1])
-
-S = Stack()
-
-S.push(1)
-S.push(2)
-S.push(3)
-
-print(S.peek())
-print(S.pop())
-print(S)
