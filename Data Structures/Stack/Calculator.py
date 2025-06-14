@@ -4,17 +4,17 @@ infix1 = ['3','*','4','+','5','*','6']
 infix2 = ['5','/','10','*','4','+','4','*','(','3','+','2',')']
 
 def evalPostfix(expr):
-    s = Stack(100)
+    S = Stack(100)
     for token in expr:
         if token in "+-/*":
-           val2 = s.pop()
-           val1 = s.pop()
-        if token == '+':    s.push(val1 + val2)
-        elif token == '-':    s.push(val1 - val2)
-        elif token == '*':    s.push(val1 * val2)
-        elif token == '/':    s.push(val1 / val2)
-        else:   s.push(int(token))
-    return s.peek()
+           val2 = S.pop()
+           val1 = S.pop()
+        if token == '+':    S.push(val1 + val2)
+        elif token == '-':    S.push(val1 - val2)
+        elif token == '*':    S.push(val1 * val2)
+        elif token == '/':    S.push(val1 / val2)
+        else:   S.push(int(token))
+    return S.peek()
     
 def precedence (op):
     if op in "()":  return 0
