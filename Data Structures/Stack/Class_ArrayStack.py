@@ -14,7 +14,6 @@ class Stack:
         if not self.isFull():
             self.top+=1
             self.array[self.top] = e
-        else: exit()
     
     def pop(self):
         if not self.isEmpty():
@@ -22,12 +21,10 @@ class Stack:
             self.array[self.top] = None
             self.top-=1
             return e
-        else: exit()
     
     def peek(self):
         if not self.isEmpty():
             return self.array[self.top]
-        else: exit()
 
     def __str__(self):
         return str(self.array[:self.top+1])
